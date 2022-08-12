@@ -1,7 +1,9 @@
+
 let burgerBlock = document.querySelector('.header__burger');
 let burger = document.querySelector('.burger');
 
 let nav = document.querySelector('.header__block-nav');
+let menu = document.querySelector('.header__ul');
 
 
 
@@ -14,6 +16,15 @@ function miFunction() {
     nav.style.display = "none";
   } else {
     nav.style.display = "block";
+  }
+
+}
+menu.addEventListener('click', miFunction22);
+function miFunction22() {
+  if (window.matchMedia("( max-width: 768px)") && nav.style.display === "none") {
+    nav.style.display = "block";
+  } else if (window.matchMedia("( max-width: 768px)") && nav.style.display === "block") {
+    nav.style.display = "none";
   }
 
 }
@@ -90,23 +101,8 @@ let answersOpen = document.querySelectorAll('.answers__box-text');
 
 
 
-// ==================================================
+// ================================================
 
-// const mySiti = {
-//   siti: 'tiras'
-// }
-// mySiti.popular = true,
-// mySiti.dd = true,
-// mySiti.wowowo = 'wwwww',
-// console.log(mySiti);
 
-// ============================================
 
-//  function multByFactor(value, multiplier = 1) {
-//   return value * multiplier
-// }
- const multByFactor = (value, multiplier = 1) => {
-  return value * multiplier
-}
-console.log(multByFactor(10, 2));
-console.log(multByFactor(10));
+
