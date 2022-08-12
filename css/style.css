@@ -130,7 +130,9 @@ a {
 .header {
     padding: 20px 0 16px;
     background: var(--primary);
-    position: relative;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
 }
 .header__block {
     display: flex;
@@ -211,7 +213,7 @@ a {
 .header__phone-link {
     display: flex;
     color: var(--light);
-    align-items: flex-end;
+    align-items: center;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -345,7 +347,7 @@ a {
     background: url(../img/main/main-bg.jpg) 0 50% / cover no-repeat;
     min-height: 800px;
     height: calc(100vh - 60px);
-    padding: 106px 0 0;
+    padding: 185px 0 0;
     color: var(--light);
     position: relative;
 }
@@ -418,7 +420,8 @@ a {
 
 /* ========== city ========== */
 .city {
-    padding: 75px 0 0;
+    padding: 125px 0 0;
+    margin-top: -50px;
 }
 .city__box {
     display: flex;
@@ -661,7 +664,7 @@ a {
     height: 325px;
     top: -85px;
     left: 0;
-    z-index: 10;
+    z-index: 1;
     display: block;
 } 
 .order::after {
@@ -672,7 +675,7 @@ a {
     height: 325px;
     top: -105px;
     right:  50px;
-    z-index: 10;
+    z-index: 1;
     display: block;
 } 
 /* .order__vrap-bg {
@@ -800,7 +803,8 @@ a {
 /* ========== services ========== */
 .services {
     background: var(--primary-bg);
-    padding: 80px 0 0;
+    padding: 125px 0 0;
+    margin-top: -75px;
 }
 .services__top-block {
     display: flex;
@@ -960,7 +964,8 @@ a {
 
 /* ========== route ========== */
 .route {
-    padding: 50px 0 100px;
+    padding: 125px 0 100px;
+    margin-top: -75px;
 }
 .route__top {
     display: flex;
@@ -1272,7 +1277,8 @@ a {
         height: 100vh;
     }
     .city {
-        padding: 0;
+        padding: 100px 0 0;
+        margin-top: -100px;
     }
     .city__box {
         margin: 10px 0 100px;
@@ -1392,6 +1398,7 @@ a {
     .header__block-nav {
         top: 68px;
     }
+
     .header__ul {
         flex-direction: column;
         justify-content: start;
@@ -1424,6 +1431,12 @@ a {
     .main {
         background: url(../img/main/main-bg-2.jpg) 0 100% / cover no-repeat;
     }
+    .city__title {
+        text-align: center;
+    }
+    .services__top-block {
+        justify-content: center;
+    }
     .order::before {
         background: url(../img/order/order-vetka.png) 0 0 / 200px no-repeat;
         width: 200px;
@@ -1444,7 +1457,8 @@ a {
         padding: 15px;
     }
     .route {
-        padding: 0px 0px 100px;
+        padding: 100px 0 100px;
+        margin-top: -100px;
     }
     .route__top {
         justify-content: center;
@@ -1491,7 +1505,7 @@ a {
         content: none;
     }
     .services {
-        padding: 25px 0 0;
+        padding: 100px 0 0;
     }
     .services__top-block {
         justify-content: center;
@@ -1599,7 +1613,7 @@ a {
 /* ====== Медиа 450px ====== */
 @media (max-width: 450px) {
     .services {
-        padding: 20px 0 0;
+        margin-top: -100px;
     }    
     .services__box-cart {
         width: 100%;
@@ -1669,7 +1683,7 @@ a {
     }
     .main {
         background: url(../img/main/main-bg-2.jpg) 0 100% / cover no-repeat;
-        padding: 54px 0 0;
+        padding: 110px 0 0;
         min-height: 730px;
     }
     .main::before {
@@ -1762,6 +1776,9 @@ a {
 @media (max-width: 370px) {
     .header__block-phone {
         display: none;
+    }
+    .header__logo {
+        width: 160px;
     }
     .slyder__box-item {
         margin: 0;
